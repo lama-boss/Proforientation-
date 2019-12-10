@@ -1,0 +1,464 @@
+@charset "UTF-8";
+* {
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+html{
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+overflow-x:  hidden;
+}
+#textmaster{
+font-size: 40px;
+}
+body {
+  background: #202020;
+  color: #e7e3e2;
+}
+#copyemail{ 
+  -ms-user-select: text;
+  -moz-user-select: text;
+  -khtml-user-select: text;
+  -webkit-user-select: text;
+}
+.head {
+  position: absolute;
+  padding: 80px;
+  font-size: 50px;
+  border-left: 6px solid #9732da;
+  transition: .5s;
+}
+.head:hover {
+  border-left: 12px solid #9732da;
+  transition: .8s;
+}
+.QuestionsDiv {
+  padding-top: 400px;
+}
+
+#q1 {
+  width: 600px;
+  font-size: 20px;
+  background-color: #6a68eb;
+  display: block;
+  position: relative;
+  border-radius: 8px;
+  opacity: 0.1;
+  
+}
+#q1 #l1 {
+  padding: 12px 30px;
+  width: 100%;
+  display: block;
+  text-align: left;
+  color: #f1f1f1;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+  transition: color 200ms ease-in;
+  overflow: hidden;
+  border-radius: 7px;
+}
+
+#q1 #l1:before {
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  content: "";
+  background-color: #202020;
+  position: absolute;
+  left: 92.2%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%) scale3d(1, 1, 1);
+  transform: translate(-50%, -50%) scale3d(0, 0, 1);
+  transition: all 700ms cubic-bezier(0.4, 0, 0.2, 4.5);
+
+  z-index: -1;
+}
+
+#q1 #l1:after {
+  width: 32px;
+  height: 32px;
+  content: "";
+  border: 2px solid #fff;
+  background-color: #fff;
+  background-image: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.414 11L4 12.414l5.414 5.414L20.828 6.414 19.414 5l-10 10z' fill='%23fff' fill-rule='nonzero'/%3E%3C/svg%3E ");
+  background-repeat: no-repeat;
+  background-position: 2px 3px;
+  border-radius: 50%;
+  z-index: 2;
+  position: absolute;
+  right: 30px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  cursor: pointer;
+  transition: all 200ms ease-in;
+}
+
+
+#q2 {
+  width: 600px;
+  font-size: 20px;
+  background-color: #6a68eb;
+  display: block;
+  margin: 10px 0;
+  position: relative;
+  border-radius: 8px;
+  opacity: 0.1;
+}
+#q2 #l2 {
+  padding: 12px 30px;
+  width: 100%;
+  display: block;
+  text-align: left;
+  color: #f1f1f1;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+  transition: color 200ms ease-in;
+  overflow: hidden;
+  border-radius: 7px;
+}
+#q2 #l2:before {
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  content: "";
+  background-color: #202020;
+  position: absolute;
+  left: 92.2%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%) scale3d(1, 1, 1);
+  transform: translate(-50%, -50%) scale3d(0, 0, 1);
+  transition: all 700ms cubic-bezier(0.4, 0, 0.2, 4.5);
+  z-index: -1;
+}
+
+#q2 #l2:after {
+  width: 32px;
+  height: 32px;
+  content: "";
+  border: 2px solid #fff;
+  background-color: #fff;
+  background-image: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.414 11L4 12.414l5.414 5.414L20.828 6.414 19.414 5l-10 10z' fill='%23fff' fill-rule='nonzero'/%3E%3C/svg%3E ");
+  background-repeat: no-repeat;
+  background-position: 2px 3px;
+  border-radius: 50%;
+  z-index: 2;
+  position: absolute;
+  right: 30px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  cursor: pointer;
+  transition: all 200ms ease-in;
+}
+
+#q1 input:checked ~ #l1 {
+  color: #202020;
+}
+#q1 input:checked ~ #l1:before {
+  -webkit-transform: translate(-50%, -50%) scale3d(60, 60, 1);
+  transform: translate(-50%, -50%) scale3d(60, 60, 1);
+  opacity: 1;
+}
+#q1 input:checked ~ #l1:after {
+  background-color: #42b581;
+  border-color: #42b581;
+}
+#q1 input {
+  width: 32px;
+  height: 32px;
+  order: 1;
+  z-index: 2;
+  position: absolute;
+  right: 30px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  cursor: pointer;
+  visibility: hidden;
+}
+
+#q2 input:checked ~ #l2 {
+  color: #202020;
+}
+#q2 input:checked ~ #l2:before {
+  -webkit-transform: translate(-50%, -50%) scale3d(56, 56, 1);
+  transform: translate(-50%, -50%) scale3d(56, 56, 1);
+  opacity: 1;
+}
+#q2 input:checked ~ #l2:after {
+  background-color: #42b581;
+  border-color: #42b581;
+}
+#q2 input {
+    
+  width: 32px;
+  height: 32px;
+  order: 1;
+  z-index: 2;
+  position: absolute;
+  right: 30px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  cursor: pointer;
+  visibility: hidden;
+}
+.type {
+  background-color: #6a68eb;
+  display: block;
+  margin: 10px;
+  padding-left: 30px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  width: 600px;
+  right: 10px;
+  position: relative;
+  border-radius: 8px;
+}
+.bla {
+  padding: 0 16px;
+  max-width: 550px;
+  margin: 50px auto;
+  font-size: 23px;
+  font-weight: 600;
+  line-height: 36px;
+}
+.allt {
+  position: relative;
+  margin: auto;
+  width: 1280px;
+  bottom: 0;
+  padding-bottom: 50px;
+}
+.t {
+  width: 190px;
+  height: 30px;
+  position: relative;
+  margin: auto;
+  margin-left: 15px;
+  border-radius: 8px;
+  transition: .5s;
+  padding-top: 20px;
+  display: inline-flex;
+}
+.p {
+  position: relative;
+  margin: auto;
+  font-size: 14px;
+  
+}
+.n {
+  position: absolute;
+  left: 10%;
+  top: 10%;
+  margin: auto;
+  opacity: 0;
+  background-color: #202020;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  font-size: 20px;
+  transition: .2s;
+}
+
+.t:hover {
+  opacity: 0.7;
+  transition: .5s;
+}
+.t:hover .n {
+  opacity: 1;
+  transition: .4s;
+}
+#t1 {
+  background-color: #685dfa;
+}
+#t2 {
+  background-color: #BF50E8;
+}
+#t3 {
+  background-color: #FF5B3C;
+}
+#t4 {
+  background-color: rgb(198, 201, 32); 
+}
+#t5 {
+  background-color: #50DB3E; 
+}
+#t6 {
+  background-color: rgb(228, 62, 62);
+}
+
+.el {
+  font-size: 25px;
+  margin: 5px;
+  color: #9732da;
+  border-radius: 8px;
+}
+#labelemail {
+  position: absolute;
+  margin: auto;
+  font-size: 55px;
+  color: #9732da;
+  left: 27%;
+  top: 9%; 
+  transition: .5s;
+  transition-delay: 4s;
+} 
+#emailDiv:hover #labelemail {
+  opacity: 0;
+  transition: .1s;
+}
+#emailDiv {
+  height: 100px;
+  width: 100px;
+  background-color: #2e2e2e;
+  border-radius: 50px;
+  transition: .5s;
+  transition-delay: 4s;
+}
+#emailDiv:hover {
+  background-color: #2e2e2e;
+  border-radius: 8px;
+  height: 120px;
+  width: 270px;
+  transition: .5s;
+
+}
+#uemail {
+  opacity: 0;
+  font-size: 15px;
+  margin-top: 10px;
+  margin-left: 10px;
+  padding: 10px;
+  width: 56px;
+  background-color: #ffffff;
+  color: #202020;
+  border: 8px solid #685dfa;
+  border-radius: 100px;
+  transition: .1s;
+  transition-delay: 4s;
+
+}
+#emailDiv:hover #uemail{
+  opacity: 1;
+  transition: .5s;
+}
+#uemail:hover {
+  width: 250px;
+  transition: .5s;
+}
+.emailbutton {
+  opacity: 0;
+  border: 0;
+  font-size: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  margin-top: 10px;
+  background-color: #685dfa;
+  color: #e7e3e2;
+  border-radius: 8px;
+  position: relative;
+  transition: .2s;
+  transition-delay: 4s;
+}
+#emailDiv:hover .emailbutton{
+  opacity: 1;
+  font-size: 16px;
+  transition: .5s;
+}
+.emailbutton:hover {
+  background-color: #9732da;
+  transition: .4s;
+}
+#ButtDiv {
+ position: relative;  
+ margin: auto;
+}
+
+.button {
+  right: 600px;
+  background-color: #42b581;
+  color: #f1f1f1;
+  border: 0;
+  border-radius: 8px;
+  height: 70px;
+  margin: 20px;
+  width: 600px;
+  padding: 20px;
+  font-size: 22px;
+  transition: .5s;
+}
+.button:hover {
+  border-radius: 100px;
+  opacity: 0.7;
+  transition: 1s;
+}
+.buttonfddo{
+  right: 600px;
+  background-color: #FF8800;
+  color: #f1f1f1;
+  border: 0;
+  border-radius: 8px;
+  height: 70px;
+  margin: 20px;
+  width: 600px;
+  padding: 20px;
+  font-size: 22px;
+  transition: .5s;
+}
+.buttonfddo:hover {
+  border-radius: 100px;
+  opacity: 0.7;
+  transition: 1s;
+}
+#ChartDiv {
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #2e2e2e;
+  position: relative;
+  margin: 0 auto;
+}
+.t:hover::after {
+  content: attr(data-title);
+  position: absolute;
+  left: 81px;
+  bottom: 5%;
+  margin: auto;
+  z-index: 1;
+  font-size: 12px;
+  padding: 5px 10px;
+  border-radius: 8px;
+  background: #202020;
+  color: #e7e3e2;
+  border: 1px #e7e3e2 solid;
+}
+.left {
+  background-color: #2e2e2e;
+  border-radius: 50px;
+  width: 40px;
+  height: 40px;
+  margin-bottom: 20px;
+}
+div {
+    position: relative;
+    margin: auto;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
